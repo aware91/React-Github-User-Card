@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-    border: dashed black 2.5px;
-    background: #00ffdd;
+    border: solid orangered 2.5px;
+    background: orange;
     display: flex;
-    flex-direction: column;
-    max-width: 45%;
+    flex-flow: column wrap;
+    max-width: 40%;
     justify-content: center;
     align-items: center;
     align-self: center;
@@ -16,7 +16,10 @@ const FollowersTitle = styled.h2`
     text-align: center;`;
 
 const Img = styled.img`
-    max-width: 40%`;
+width: 150px;
+height: 150px;
+border-radius: 50%;`;
+
 const UserCard = (props) => {
     console.log(props)
     return (
@@ -25,21 +28,24 @@ const UserCard = (props) => {
                 <h3>{props.users.name}</h3>
                 <p>{props.users.bio}</p>
                 <p>Location: {props.users.location}</p>
-                <Img src = {props.users.avatar_url} />
+                <p>Website: {props.users.blog}</p>
+                <Img src = {props.users.avatar_url}  />
             </Container>
             <div>
                 <FollowersTitle>Followers</FollowersTitle>
             </div>
+            <div className='followers'>
             {props.followers.map(follower => (
-                <Container key={follower.id}>
+                <div key={follower.id} className='follower'>
                     <div> 
                     <h3>{follower.login}</h3>
                     <p>{follower.url}</p>
                     <p>{follower.gravatar_id}</p>
-                    <img src = {follower.avatar_url} />
+                    <img src = {follower.avatar_url} className='img' />
                     </div>
-                </Container>
+                </div>
             ))}
+            </div>
         </>
     )
 }

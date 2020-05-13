@@ -5,7 +5,8 @@ import UserCard from "./components/UserCard"
 import styled from 'styled-components'
 
 const Title = styled.h1`
-  text-align: center`;
+  text-align: center;
+  color: white`;
 
 class App extends React.Component {
   constructor() {
@@ -40,9 +41,9 @@ class App extends React.Component {
 
   render() {
   return (
-    <div>
+    <div className="App">
       <div>
-        <Title>Github User Cards with Class Components</Title>
+        <Title>Github User Cards</Title>
         <UserCard users={this.state.user} followers={this.state.followers} />
       </div>
     </div>

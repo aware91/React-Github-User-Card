@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: rgb(15, 15, 109);
 }
 
 .App-logo {
@@ -50,15 +51,18 @@
   border: solid orangered 2.5px;
     background: orange;
     display: flex;
-    flex-flow: column wrap;
-    width: 45%;
+    flex-flow: row wrap;
+    width: 40%;
     justify-content: center;
     align-items: center;
-    margin: 2% auto
+    margin: 2% auto;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: 2%;
 }

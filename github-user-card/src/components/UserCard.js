@@ -10,15 +10,18 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     align-self: center;
-    margin: 0 auto;`;
+    margin: 0 auto;
+    border-radius: 20px`;
 
 const FollowersTitle = styled.h2`
-    text-align: center;`;
+    text-align: center;
+    color: white`;
 
 const Img = styled.img`
 width: 150px;
 height: 150px;
-border-radius: 50%;`;
+border-radius: 50%;
+margin: 2%`;
 
 const UserCard = (props) => {
     console.log(props)
